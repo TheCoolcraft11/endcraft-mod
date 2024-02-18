@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "endcraft",
+	"version": "${version}",
+	"name": "endcraft - beyond the void",
+	"description": "Endcraft!",
+	"authors": [
+		"TheCoolcraft11"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/endcraft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.thecoolcraft11.endcraft.Endcraft"
+		],
+		"client": [
+			"net.thecoolcraft11.endcraft.EndcraftClient"
+		],
+		"fabric-datagen": [
+			"net.thecoolcraft11.endcraft.EndcraftDataGenerator"
+		]
+	},
+	"mixins": [
+		"endcraft.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
