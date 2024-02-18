@@ -2,10 +2,6 @@ package net.thecoolcraft11.endcraft;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.thecoolcraft11.endcraft.block.ModBlocks;
-import net.thecoolcraft11.endcraft.item.ModItems;
-import net.thecoolcraft11.endcraft.item.ModItemGroups;
-import net.thecoolcraft11.endcraft.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,18 +17,6 @@ public class Endcraft implements ModInitializer {
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
-		LOGGER.info("Hello Fabric world!");
-		ModItemGroups.registerItemGroups();
-		ModItems.registerModItems();
-		ModBlocks.registerModBlocks();
-		//ModLootTableModifiers.modifyLootTables();
-		//ModCustomTrades.registerTrades();
-		//ModVillagers.registerVillager();
-		//ModSounds.registerSounds();
-		//ModBlockEntities.registerBlockEntities();
-		//ModScreenHandlers.registerScreenHandlers();
-		//ModRecipes.registerRecipes();
-		ModWorldGeneration.generateModWorldGen();
 
 		LOGGER.info("Initialize Endcraft!");
 	}
