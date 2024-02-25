@@ -1,0 +1,37 @@
+{
+  "item.endcraft.enderite_scrap": "Enderite Scrap",
+  "item.endcraft.enderite_ingot": "Enderite Ingot",
+  "item.endcraft.enderite_pickaxe": "Enderite Pickaxe",
+  "item.endcraft.enderite_sword": "Enderite Sword",
+  "item.endcraft.enderite_axe": "Enderite Axe",
+  "item.endcraft.enderite_shovel": "Enderite Shovel",
+  "item.endcraft.enderite_hoe": "Enderite Hoe",
+  "item.endcraft.empty_essence": "Empty Essence",
+  "item.endcraft.void_essence": "Void Essence",
+  "item.endcraft.overworld_essence": "Overworld Essence",
+  "item.endcraft.nether_essence": "Nether Essence",
+  "item.endcraft.the_end_essence": "End Essence",
+  "item.endcraft.essence_core": "Essence Core",
+  "item.endcraft.enderite_core": "Enderite Core",
+  "item.endcraft.enderite_engery": "Enderite Energy",
+  "item.endcraft.ender_staff": "Ender Staff",
+
+
+  "itemgroup.endcraft": "Endcraft: Beyond the Void",
+
+
+  "block.endcraft.enderite_ore" : "Enderite Ore",
+  "block.endcraft.ender_forge_converter" : "Ender Forge Converter",
+  "block.sendcraft.enderite_block" : "Enderite Block",
+  "block.endcraft.essence_altar" : "Essence Altar",
+  "block.endcraft.ender_charger" : "Ender Charger",
+
+
+  "death.attack.essence.removed_area" : "%1$s was in a colibating area",
+
+
+  "endcraft.gui.ender_forge_converter_name": "Ender Forge Converter",
+  "endcraft.gui.essence_altar" : "Essence Altar",
+
+  "effect.endcraft.fly": "Fly"
+}

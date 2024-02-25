@@ -2,14 +2,24 @@ package net.thecoolcraft11.endcraft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.entity.effect.StatusEffect;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
 import net.thecoolcraft11.endcraft.block.ModBlocks;
+import net.thecoolcraft11.endcraft.block.entity.ModBlockEntities;
 import net.thecoolcraft11.endcraft.item.ModItems;
 import net.thecoolcraft11.endcraft.item.ModItemGroups;
+import net.thecoolcraft11.endcraft.recipe.ModRecipes;
+import net.thecoolcraft11.endcraft.screen.ModScreenHandlers;
+import net.thecoolcraft11.endcraft.statuseffects.FlyStatusEffect;
 import net.thecoolcraft11.endcraft.world.gen.ModWorldGeneration;
+import net.thecoolcraft11.endcraft.statuseffects.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Endcraft implements ModInitializer {
+
 	public static final String MOD_ID = "endcraft";
 	// This logger is used to write text to the console and the log file.
 	// It is considered best practice to use your mod id as the logger's name.
@@ -29,10 +39,11 @@ public class Endcraft implements ModInitializer {
 		//ModCustomTrades.registerTrades();
 		//ModVillagers.registerVillager();
 		//ModSounds.registerSounds();
-		//ModBlockEntities.registerBlockEntities();
-		//ModScreenHandlers.registerScreenHandlers();
-		//ModRecipes.registerRecipes();
+		ModBlockEntities.registerBlockEntities();
+		ModScreenHandlers.registerScreenHandlers();
+		ModRecipes.registerRecipes();
 		ModWorldGeneration.generateModWorldGen();
+		ModStatusEffects.registerStatusEffects();
 
 		LOGGER.info("Initialize Endcraft!");
 	}
