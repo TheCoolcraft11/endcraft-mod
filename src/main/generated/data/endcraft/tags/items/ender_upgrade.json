@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "endcraft:ender_upgrade_range_1",
+    "endcraft:ender_upgrade_range_2",
+    "endcraft:ender_upgrade_range_3",
+    "endcraft:ender_upgrade_range_4",
+    "endcraft:ender_upgrade_range_5",
+    "endcraft:ender_upgrade_durability_1",
+    "endcraft:ender_upgrade_durability_2",
+    "endcraft:ender_upgrade_durability_3",
+    "endcraft:ender_upgrade_durability_4",
+    "endcraft:ender_upgrade_durability_5"
+  ]
+}

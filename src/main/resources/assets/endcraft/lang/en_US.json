@@ -15,6 +15,30 @@
   "item.endcraft.enderite_core": "Enderite Core",
   "item.endcraft.enderite_engery": "Enderite Energy",
   "item.endcraft.ender_staff": "Ender Staff",
+  "item.endcraft.energy_cell": "Energy Cell",
+
+  "upgrade.endcraft.none.0" : "None",
+  "upgrade.endcraft.range.1" : "Range I",
+  "upgrade.endcraft.range.2" : "Range II",
+  "upgrade.endcraft.range.3" : "Range III",
+  "upgrade.endcraft.range.4" : "Range IV",
+  "upgrade.endcraft.range.5" : "Range V",
+  "upgrade.endcraft.durability.1" : "Durability I",
+  "upgrade.endcraft.durability.2" : "Durability II",
+  "upgrade.endcraft.durability.3" : "Durability III",
+  "upgrade.endcraft.durability.4" : "Durability IV",
+  "upgrade.endcraft.durability.5" : "Durability V",
+
+  "item.endcraft.ender_upgrade_range_1" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_range_2" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_range_3" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_range_4" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_range_5" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_durability_1" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_durability_2" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_durability_3" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_durability_4" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_durability_5" : "Ender Upgrade",
 
 
   "itemgroup.endcraft": "Endcraft: Beyond the Void",
@@ -32,6 +56,8 @@
 
   "endcraft.gui.ender_forge_converter_name": "Ender Forge Converter",
   "endcraft.gui.essence_altar" : "Essence Altar",
+  "endcraft.gui.ender_charger" : "Ender Charger",
+  "endcraft.gui.mod_table" : "Mod Table",
 
   "effect.endcraft.fly": "Fly"
 }

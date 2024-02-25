@@ -20,6 +20,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.thecoolcraft11.endcraft.Endcraft;
 import net.thecoolcraft11.endcraft.item.ModItems;
 
 import net.thecoolcraft11.endcraft.screen.EnderChargerScreenHandler;
@@ -130,15 +131,21 @@ public class EnderChargerBlockEntity extends BlockEntity implements ExtendedScre
     }
 
 
+    int energytomove = 1;
     private void craftItem() {
-        int energytomove = 1;
+        if (this.getStack(INPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).isEmpty() || this.getStack(OUTPUT_SLOT).getDamage() == 0 || this.getStack(INPUT_SLOT).getOrCreateNbt().getInt("Energies") == 0) {
+            energytomove = 1;
+        }
 
         this.getStack(OUTPUT_SLOT).setDamage(this.getStack(OUTPUT_SLOT).getDamage() - energytomove);
         this.getStack(INPUT_SLOT).getOrCreateNbt().putInt("Energies", this.getStack(INPUT_SLOT).getOrCreateNbt().getInt("Energies") - energytomove);
         if(energytomove <= this.getStack(INPUT_SLOT).getOrCreateNbt().getInt("Energies")) {
             energytomove++;
+            Endcraft.LOGGER.info(String.valueOf(energytomove));
         }else {
             energytomove = this.getStack(INPUT_SLOT).getOrCreateNbt().getInt("Energies");
+            Endcraft.LOGGER.info("false");
+
         }
     }
 
@@ -152,7 +159,7 @@ public class EnderChargerBlockEntity extends BlockEntity implements ExtendedScre
 
 
     private boolean hasRecipe() {
-        return (this.getStack(INPUT_SLOT).getItem() == ModItems.ENERGY_CELL  && this.getStack(INPUT_SLOT).getDamage() > 0 && this.getStack(OUTPUT_SLOT).getItem() == ModItems.ENDER_STAFF && this.getStack(OUTPUT_SLOT).getDamage() > 0);
+        return (this.getStack(INPUT_SLOT).getItem() == ModItems.ENERGY_CELL  && this.getStack(INPUT_SLOT).getOrCreateNbt().getInt("Energies") > 0 && this.getStack(OUTPUT_SLOT).getItem() == ModItems.ENDER_STAFF && this.getStack(OUTPUT_SLOT).getDamage() > 0);
     }
 
     private boolean hasItemInSlot(int slot, Item item, int count) {

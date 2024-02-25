@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "endcraft:block/enderite_block",
+    "east": "endcraft:block/mod_table_side",
+    "north": "endcraft:block/mod_table_front",
+    "particle": "endcraft:block/mod_table_front",
+    "south": "endcraft:block/mod_table_side",
+    "up": "endcraft:block/mod_table_top",
+    "west": "endcraft:block/mod_table_front"
+  }
+}

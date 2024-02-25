@@ -20,10 +20,7 @@ import net.thecoolcraft11.endcraft.block.entity.EssenceAltarBlockEntity;
 import net.thecoolcraft11.endcraft.block.entity.ModBlockEntities;
 import net.thecoolcraft11.endcraft.block.renderer.EnderForgeConverterBlockEntityRenderer;
 import net.thecoolcraft11.endcraft.block.renderer.EssenceAltarBlockEntityRenderer;
-import net.thecoolcraft11.endcraft.screen.EnderChargerScreen;
-import net.thecoolcraft11.endcraft.screen.EnderForgeConvertingScreen;
-import net.thecoolcraft11.endcraft.screen.EssenceAltarScreen;
-import net.thecoolcraft11.endcraft.screen.ModScreenHandlers;
+import net.thecoolcraft11.endcraft.screen.*;
 import org.lwjgl.glfw.GLFW;
 
 public class EndcraftClient implements ClientModInitializer {
@@ -37,5 +34,6 @@ public class EndcraftClient implements ClientModInitializer {
         HandledScreens.register(ModScreenHandlers.ESSENCE_ALTAR_SCREEN_HANDLER, EssenceAltarScreen::new);
         BlockEntityRendererFactories.register(ModBlockEntities.ESSENCE_ALTAR_BLOCK_ENTITY, EssenceAltarBlockEntityRenderer::new);
         HandledScreens.register(ModScreenHandlers.ENDER_CHARGER_SCREEN_HANDLER, EnderChargerScreen::new);
+        HandledScreens.register(ModScreenHandlers.MOD_TABLE_SCREEN_HANDLER, ModTableScreen::new);
     }
 }

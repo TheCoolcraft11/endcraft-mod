@@ -26,13 +26,9 @@ public class EnergyCellItem extends Item {
 
     @Override
     public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
-        if (getNbtInt(player.getMainHandStack(), "Energies") + countItems(player, ModItems.ENDERITE_ENERGY) < 8192) {
-            addNbt(player.getMainHandStack(), "Energies", countItems(player, ModItems.ENDERITE_ENERGY));
+            addNbt(player.getMainHandStack(), "Energies", getNbtInt(player.getMainHandStack(), "Energies") + countItems(player, ModItems.ENDERITE_ENERGY));
             removeItems(player, ModItems.ENDERITE_ENERGY);
             return TypedActionResult.success(player.getMainHandStack(), true);
-        }
-        player.playSound(SoundEvents.BLOCK_FIRE_EXTINGUISH, SoundCategory.PLAYERS, 1f,1f);
-        return TypedActionResult.fail(player.getMainHandStack());
     }
     private static int countItems(PlayerEntity player, Item item) {
         int energyCount = 0;
@@ -60,7 +56,13 @@ public class EnergyCellItem extends Item {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         tooltip.add(Text.of("Energies: " + getNbtInt(stack, "Energies")));
-        // super.appendTooltip(stack, world, tooltip, context);
+        for (int i = 0; i < tooltip.size(); i++) {
+            if (tooltip.get(i).getString().contains("Durability:")) {
+                tooltip.remove(i);
+                break;
+            }
+        }
+        super.appendTooltip(stack, world, tooltip, context);
     }
 
     @Override
