@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.world.World;
+import net.thecoolcraft11.endcraft.Endcraft;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -31,4 +32,5 @@ public class EnderUpgradeItem extends Item {
         tooltip.add(Text.translatable("upgrade.endcraft." + type + "." + level));
         super.appendTooltip(stack, world, tooltip, context);
     }
+
 }

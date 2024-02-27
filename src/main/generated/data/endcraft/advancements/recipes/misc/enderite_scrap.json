@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enderite_scrap": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "endcraft:enderite_scrap"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:enderite_scrap"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enderite_scrap"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:enderite_scrap"
+    ]
+  }
+}

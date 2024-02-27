@@ -1,0 +1,11 @@
+{
+  "type": "endcraft:ender_forge_converting",
+  "ingredients": [
+    {
+      "item": "endcraft:enderite_block"
+    }
+  ],
+  "output": {
+    "item": "minecraft:diamond"
+  }
+}

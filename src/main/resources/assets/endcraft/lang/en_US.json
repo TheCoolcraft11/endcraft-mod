@@ -28,6 +28,11 @@
   "upgrade.endcraft.durability.3" : "Durability III",
   "upgrade.endcraft.durability.4" : "Durability IV",
   "upgrade.endcraft.durability.5" : "Durability V",
+  "upgrade.endcraft.fall.1" : "Fall I",
+  "upgrade.endcraft.fall.2" : "Fall II",
+  "upgrade.endcraft.fall.3" : "Fall III",
+  "upgrade.endcraft.fall.4" : "Fall IV",
+  "upgrade.endcraft.fall.5" : "Fall V",
 
   "item.endcraft.ender_upgrade_range_1" : "Ender Upgrade",
   "item.endcraft.ender_upgrade_range_2" : "Ender Upgrade",
@@ -38,7 +43,11 @@
   "item.endcraft.ender_upgrade_durability_2" : "Ender Upgrade",
   "item.endcraft.ender_upgrade_durability_3" : "Ender Upgrade",
   "item.endcraft.ender_upgrade_durability_4" : "Ender Upgrade",
-  "item.endcraft.ender_upgrade_durability_5" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_fall_1" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_fall_2" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_fall_3" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_fall_4" : "Ender Upgrade",
+  "item.endcraft.ender_upgrade_fall_5" : "Ender Upgrade",
 
 
   "itemgroup.endcraft": "Endcraft: Beyond the Void",

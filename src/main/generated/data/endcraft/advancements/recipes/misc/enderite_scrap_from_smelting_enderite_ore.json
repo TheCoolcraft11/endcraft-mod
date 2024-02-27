@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enderite_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "endcraft:enderite_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:enderite_scrap_from_smelting_enderite_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enderite_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:enderite_scrap_from_smelting_enderite_ore"
+    ]
+  }
+}

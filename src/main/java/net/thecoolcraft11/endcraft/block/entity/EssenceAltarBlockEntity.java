@@ -345,6 +345,9 @@ public class EssenceAltarBlockEntity extends BlockEntity implements ExtendedScre
         }
     }
     public float getScale() {
-       return this.getStack(INPUT_SLOT).getCount() * 2;
+        if (this.getStack(INPUT_SLOT).getCount() >= 1) {
+            return this.getStack(INPUT_SLOT).getCount() * 2;
+        }
+        return 8;
     }
 }

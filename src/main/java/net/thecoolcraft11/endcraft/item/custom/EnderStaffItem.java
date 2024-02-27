@@ -1,7 +1,9 @@
 package net.thecoolcraft11.endcraft.item.custom;
 
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.item.TooltipContext;
+import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.StackReference;
@@ -36,7 +38,14 @@ public class EnderStaffItem extends Item {
             }
             if (!(player.getMainHandStack().getDamage() >= player.getMainHandStack().getMaxDamage())) {
                 player.teleport(Raycast.raycast(reachDistance).getBlockPos().getX(), Raycast.raycast(reachDistance).getBlockPos().getY(), Raycast.raycast(reachDistance).getBlockPos().getZ());
-                player.getMainHandStack().setDamage(player.getMainHandStack().getDamage() + 1);
+                if (hasNbtUpgrade(player.getMainHandStack(), "durability")) {
+                    player.getMainHandStack().setDamage((int) (player.getMainHandStack().getDamage() + 5 / getNbtLevel(player.getMainHandStack(), "durability")));
+                }else {
+                    player.getMainHandStack().setDamage(player.getMainHandStack().getDamage() + 5 );
+                }
+                if(hasNbtUpgrade(player.getMainHandStack(), "fall")) {
+                    player.fallDistance = (float) (player.fallDistance - getNbtLevel(player.getMainHandStack(), "fall") * 10);
+                }
                 return TypedActionResult.success(player.getMainHandStack(),true);
             }
         }

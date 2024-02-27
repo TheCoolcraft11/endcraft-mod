@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "endcraft:block/ender_forge_converter"
+    }
+  }
+}

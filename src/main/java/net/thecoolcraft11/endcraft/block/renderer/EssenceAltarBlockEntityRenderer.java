@@ -32,8 +32,8 @@ public class EssenceAltarBlockEntityRenderer implements BlockEntityRenderer<Esse
         matrices.push();
         matrices.translate(0.5f, entity.getScale() * 1.5,0.5f);
         matrices.scale(entity.getScale() * 2.75f, entity.getScale() * 2.75f,entity.getScale() * 2.75f);
-            itemRenderer.renderItem(itemStack, ModelTransformationMode.HEAD,getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(),1);
-            matrices.pop();
+        itemRenderer.renderItem(itemStack, ModelTransformationMode.HEAD,getLightLevel(entity.getWorld(), entity.getPos()), OverlayTexture.DEFAULT_UV, matrices, vertexConsumers, entity.getWorld(),1);
+        matrices.pop();
 
 
     }

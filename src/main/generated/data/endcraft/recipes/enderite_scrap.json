@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "endcraft:enderite_scrap"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SNN",
+    "NN "
+  ],
+  "result": {
+    "item": "endcraft:enderite_ingot"
+  }
+}
