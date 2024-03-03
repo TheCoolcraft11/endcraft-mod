@@ -1,0 +1,11 @@
+{
+  "type": "endcraft:voidborn_abyss_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "endcraft:voidborn_abyss_noise",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "endcraft:voidborn_abyss_biome"
+    }
+  }
+}

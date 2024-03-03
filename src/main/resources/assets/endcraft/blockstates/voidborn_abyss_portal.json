@@ -1,0 +1,10 @@
+{
+"variants": {
+  "activated=true": {
+    "model": "endcraft:block/voidborn_abyss_portal_on"
+  },
+  "activated=false": {
+    "model": "endcraft:block/voidborn_abyss_portal_off"
+    }
+  }
+}

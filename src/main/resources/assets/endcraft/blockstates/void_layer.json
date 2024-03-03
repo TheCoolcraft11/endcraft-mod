@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "layers=1": {
+      "model": "endcraft:block/void_height2"
+    },
+    "layers=2": {
+      "model": "endcraft:block/void_height4"
+    },
+    "layers=3": {
+      "model": "endcraft:block/void_height6"
+    },
+    "layers=4": {
+      "model": "endcraft:block/void_height8"
+    },
+    "layers=5": {
+      "model": "endcraft:block/void_height10"
+    },
+    "layers=6": {
+      "model": "endcraft:block/void_height12"
+    },
+    "layers=7": {
+      "model": "endcraft:block/void_height14"
+    },
+    "layers=8": {
+      "model": "endcraft:block/void_fluid"
+    }
+  }
+}

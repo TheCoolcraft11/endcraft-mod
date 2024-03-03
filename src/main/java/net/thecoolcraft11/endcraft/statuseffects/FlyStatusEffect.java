@@ -1,10 +1,12 @@
 package net.thecoolcraft11.endcraft.statuseffects;
 
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.Fluids;
 import net.thecoolcraft11.endcraft.Endcraft;
 
 public class FlyStatusEffect extends StatusEffect {

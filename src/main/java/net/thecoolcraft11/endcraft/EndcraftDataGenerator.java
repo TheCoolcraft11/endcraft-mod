@@ -7,6 +7,9 @@ import net.minecraft.registry.RegistryKeys;
 import net.thecoolcraft11.endcraft.datagen.*;
 import net.thecoolcraft11.endcraft.world.ModConfiguredFeatures;
 import net.thecoolcraft11.endcraft.world.ModPlacedFeatures;
+import net.thecoolcraft11.endcraft.world.biome.ModBiomes;
+import net.thecoolcraft11.endcraft.world.biome.surface.ModMaterialRules;
+import net.thecoolcraft11.endcraft.world.dimension.ModDimensions;
 
 public class EndcraftDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -26,5 +29,7 @@ public class EndcraftDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistryBuilder registryBuilder) {
 		registryBuilder.addRegistry(RegistryKeys.CONFIGURED_FEATURE, ModConfiguredFeatures::boostrap);
 		registryBuilder.addRegistry(RegistryKeys.PLACED_FEATURE, ModPlacedFeatures::boostrap);
+		//registryBuilder.addRegistry(RegistryKeys.DIMENSION_TYPE, ModDimensions::bootstrapType);
+		//registryBuilder.addRegistry(RegistryKeys.BIOME, ModBiomes::bootstrap);
 	}
 }

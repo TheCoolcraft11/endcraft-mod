@@ -11,7 +11,7 @@ import net.thecoolcraft11.endcraft.Endcraft;
 import net.thecoolcraft11.endcraft.block.ModBlocks;
 
 public class ModItemGroups {
-    public static final ItemGroup RUBY_GROUP = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup ENDCRAFT_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Endcraft.MOD_ID, "enderite"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.endcraft"))
                     .icon(() -> new ItemStack(ModBlocks.ENDERITE_ORE)).entries((displayContext, entries) -> {
@@ -53,14 +53,14 @@ public class ModItemGroups {
                         entries.add(ModItems.ENDER_UPGRADE_FALL_3);
                         entries.add(ModItems.ENDER_UPGRADE_FALL_4);
                         entries.add(ModItems.ENDER_UPGRADE_FALL_5);
-                        entries.add(ModBlocks.END_PEDASTEL_DARKNESS);
-                        entries.add(ModBlocks.END_PEDASTEL_EYE);
-                        entries.add(ModBlocks.END_PEDASTEL_FLAME);
-                        entries.add(ModBlocks.END_PEDASTEL_FOG);
-                        entries.add(ModBlocks.END_PEDASTEL_KNOWLAGE);
-                        entries.add(ModBlocks.END_PEDASTEL_MYTHIC);
-                        entries.add(ModBlocks.END_PEDASTEL_PATH);
-                        entries.add(ModBlocks.END_PEDASTEL_TEAR);
+                        entries.add(ModBlocks.END_PEDASTEL);
+                        entries.add(ModBlocks.FAKE_BLOCK);
+                        entries.add(ModBlocks.INFECTED_DIRT);
+                        entries.add(ModBlocks.INFECTED_GRASS);
+                        entries.add(ModBlocks.INFECTED_STONE);
+                        entries.add(ModBlocks.VOID_FLUID);
+                        entries.add(ModBlocks.VOID_LAYER);
+                        entries.add(ModItems.VOID_GHOST_SPAWN_EGG);
                     }).build());
     public static void registerItemGroups() {
         Endcraft.LOGGER.info("Registring Item Groups for " + Endcraft.MOD_ID);

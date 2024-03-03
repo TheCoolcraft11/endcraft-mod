@@ -1,0 +1,31 @@
+{
+"variants": {
+  "type=0": {
+    "model": "endcraft:block/end_pedastel"
+  },
+  "type=1": {
+    "model": "endcraft:block/end_pedastel_darkness"
+  },
+  "type=2": {
+    "model": "endcraft:block/end_pedastel_eye"
+  },
+  "type=3": {
+    "model": "endcraft:block/end_pedastel_flame"
+  },
+  "type=4": {
+    "model": "endcraft:block/end_pedastel_fog"
+  },
+  "type=5": {
+    "model": "endcraft:block/end_pedastel_knowlage"
+  },
+  "type=6": {
+    "model": "endcraft:block/end_pedastel_mythic"
+  },
+  "type=7": {
+    "model": "endcraft:block/end_pedastel_path"
+  },
+  "type=8": {
+    "model": "endcraft:block/end_pedastel_tear"
+  }
+}
+}

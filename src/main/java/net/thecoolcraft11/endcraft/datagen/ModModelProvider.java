@@ -4,9 +4,13 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
+import net.minecraft.util.Identifier;
 import net.thecoolcraft11.endcraft.block.ModBlocks;
 import net.thecoolcraft11.endcraft.item.ModItems;
+
+import java.util.Optional;
 
 
 public class ModModelProvider extends FabricModelProvider {
@@ -24,14 +28,10 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleState(ModBlocks.MOD_TABLE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FAKE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.FAKE_BLOCK2);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.END_PEDASTEL_DARKNESS);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.END_PEDASTEL_EYE);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.END_PEDASTEL_FOG);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.END_PEDASTEL_FLAME);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.END_PEDASTEL_KNOWLAGE);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.END_PEDASTEL_MYTHIC);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.END_PEDASTEL_PATH);
-        blockStateModelGenerator.registerSimpleState(ModBlocks.END_PEDASTEL_TEAR);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.VOID_FLUID);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INFECTED_DIRT);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INFECTED_STONE);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.INFECTED_GRASS);
 
 
 
@@ -63,5 +63,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ENDER_UPGRADE_FALL_3, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENDER_UPGRADE_FALL_4, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENDER_UPGRADE_FALL_5, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.VOID_GHOST_SPAWN_EGG, new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }
 }

@@ -16,6 +16,8 @@ public class ModStatusEffects {
 
     public static final StatusEffect FLY = registerStatusEffect("fly",
             new FlyStatusEffect());
+    public static final StatusEffect VOID = registerStatusEffect("void",
+            new VoidStatusEffect());
 
     public static StatusEffect registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(Endcraft.MOD_ID, name), statusEffect);

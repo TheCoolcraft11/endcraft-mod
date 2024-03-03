@@ -24,6 +24,12 @@ public class FakeBlock extends Block {
         return ActionResult.SUCCESS;
     }
 
+    @Override
+    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
+        changeBlocksAroundPoint(world, pos, 1);
+        super.neighborUpdate(state, world, pos, sourceBlock, sourcePos, notify);
+    }
+
     private static void changeBlocksAroundPoint(World world, BlockPos centerPos, int radius) {
         int halfRadius = radius / 2;
 
@@ -35,10 +41,10 @@ public class FakeBlock extends Block {
                     Block block = world.getBlockState(blockPos).getBlock();
 
                     if (block == ModBlocks.FAKE_BLOCK) {
-                        world.setBlockState(blockPos, ModBlocks.FAKE_BLOCK2.getDefaultState(), 3);
+                        world.setBlockState(blockPos, ModBlocks.FAKE_BLOCK2.getDefaultState(), 1);
                         }
                     if (block == ModBlocks.FAKE_BLOCK2) {
-                        world.setBlockState(blockPos, ModBlocks.FAKE_BLOCK.getDefaultState(), 3);
+                        world.setBlockState(blockPos, ModBlocks.FAKE_BLOCK.getDefaultState(), 1);
                     }
                 }
             }

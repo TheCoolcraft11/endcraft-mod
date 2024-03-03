@@ -6,15 +6,13 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.MinecraftVersion;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.PickaxeItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.server.dedicated.MinecraftDedicatedServer;
 import net.minecraft.util.Identifier;
 import net.thecoolcraft11.endcraft.Endcraft;
+import net.thecoolcraft11.endcraft.entity.ModEntities;
 import net.thecoolcraft11.endcraft.item.custom.EmptyEssenceItem;
 import net.thecoolcraft11.endcraft.item.custom.EnderStaffItem;
 import net.thecoolcraft11.endcraft.item.custom.EnderUpgradeItem;
@@ -60,6 +58,7 @@ public class ModItems {
     public static final Item ENDER_UPGRADE_FALL_3 = registerItem("ender_upgrade_fall_3", new EnderUpgradeItem(new FabricItemSettings().maxCount(1), "fall", 3));
     public static final Item ENDER_UPGRADE_FALL_4 = registerItem("ender_upgrade_fall_4", new EnderUpgradeItem(new FabricItemSettings().maxCount(1), "fall", 4));
     public static final Item ENDER_UPGRADE_FALL_5 = registerItem("ender_upgrade_fall_5", new EnderUpgradeItem(new FabricItemSettings().maxCount(1), "fall", 5));
+    public static final Item VOID_GHOST_SPAWN_EGG = registerItem("void_ghost_spawn_egg", new SpawnEggItem(ModEntities.VOID_GHOST, 0x000000, 0xFFFFFF, new FabricItemSettings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Endcraft.MOD_ID, name), item);

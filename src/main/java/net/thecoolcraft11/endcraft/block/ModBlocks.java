@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
@@ -32,25 +33,30 @@ public class ModBlocks {
             new FakeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(4f)));
     public static final Block FAKE_BLOCK2 = registerBlock("fake_block2",
             new FakeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(4f).noCollision()));
-    public static final Block END_PEDASTEL_EYE = registerBlock("end_pedastel_eye",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(4f)));
-    public static final Block END_PEDASTEL_DARKNESS = registerBlock("end_pedastel_darkness",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(36000000).resistance(36000000).nonOpaque()));
-    public static final Block END_PEDASTEL_FLAME = registerBlock("end_pedastel_flame",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(36000000).resistance(36000000).nonOpaque()));
-    public static final Block END_PEDASTEL_FOG = registerBlock("end_pedastel_fog",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(36000000).resistance(36000000).nonOpaque()));
-    public static final Block END_PEDASTEL_KNOWLAGE = registerBlock("end_pedastel_knowlage",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(36000000).resistance(36000000).nonOpaque()));
-    public static final Block END_PEDASTEL_MYTHIC = registerBlock("end_pedastel_mythic",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(36000000).resistance(36000000).nonOpaque()));
-    public static final Block END_PEDASTEL_PATH = registerBlock("end_pedastel_path",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(36000000).resistance(36000000).nonOpaque()));
-    public static final Block END_PEDASTEL_TEAR = registerBlock("end_pedastel_tear",
-            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(36000000).resistance(36000000).nonOpaque()));
+    public static final Block END_PEDASTEL = registerBlock("end_pedastel",
+            new EndPedastelBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(-1f).resistance(36000000f).nonOpaque())); //Shattenschleier, Oculus-Erz, Novaflame Spark, Nebulith Crystal, Chronikum, Phantasma Prism,Nebula Shard , Nullstone,
+    public static final Block VOIDBORN_ABYSS_PORTAL = registerBlock("voidborn_abyss_portal",
+            new VoidbornAbyssPortalBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL).strength(-1f).resistance(36000000f).nonOpaque().dropsNothing().pistonBehavior(PistonBehavior.BLOCK).noCollision()));
+    public static final Block VOID_FLUID = registerBlock("void_fluid",
+            new VoidBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(-1f).noCollision()));
+    public static final Block VOID_LAYER = registerBlock("void_layer",
+            new VoidLayerBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(-1f).noCollision()));
+    public static final Block INFECTED_DIRT = registerBlock("infected_dirt",
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(100f)));
+    public static final Block INFECTED_GRASS = registerBlock("infected_grass",
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(100f)));
+    public static final Block INFECTED_STONE = registerBlock("infected_stone",
+            new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(500f)));
+    public static final Block VOIDBORN_PORTAL_ACTIVATOR_BLOCK = registerBlock("voidborn_portal_activator_block",
+            new VoidbornPortalActivatorBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL).collidable(true)));
+
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier(Endcraft.MOD_ID, name), block);
+
+    }
+    private static Block registerBlockWithOutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(Endcraft.MOD_ID, name), block);
 
     }

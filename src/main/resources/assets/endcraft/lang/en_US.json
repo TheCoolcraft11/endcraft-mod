@@ -16,6 +16,7 @@
   "item.endcraft.enderite_engery": "Enderite Energy",
   "item.endcraft.ender_staff": "Ender Staff",
   "item.endcraft.energy_cell": "Energy Cell",
+  "item.endcraft.void_ghost_spawn_egg": "Void Ghost Spawn Egg",
 
   "upgrade.endcraft.none.0" : "None",
   "upgrade.endcraft.range.1" : "Range I",
@@ -58,9 +59,19 @@
   "block.sendcraft.enderite_block" : "Enderite Block",
   "block.endcraft.essence_altar" : "Essence Altar",
   "block.endcraft.ender_charger" : "Ender Charger",
+  "block.endcraft.fake_block" : "Fake Block",
+  "block.endcraft.fake_block2" : "Fake Block",
+  "block.endcraft.infected_dirt" : "Infected Dirt",
+  "block.endcraft.infected_stone" : "Infected Stone",
+  "block.endcraft.infected_grass" : "Infected Grass",
+  "block.endcraft.void_fluid" : "Void Fluid",
+  "block.endcraft.void_layer" : "Void Layer",
+  "block.endcraft.end_pedastel" : "End Pedastel",
+  "block.endcraft.voidborn_abyss_portal" : "Voidborn Abyss Portal",
 
 
   "death.attack.essence.removed_area" : "%1$s was in a colibating area",
+  "death.attack.player.swam_void" : "%1$s was caught by the Void",
 
 
   "endcraft.gui.ender_forge_converter_name": "Ender Forge Converter",
@@ -68,5 +79,7 @@
   "endcraft.gui.ender_charger" : "Ender Charger",
   "endcraft.gui.mod_table" : "Mod Table",
 
-  "effect.endcraft.fly": "Fly"
+  "effect.endcraft.fly": "Fly",
+
+  "entity.endcraft.void_ghost" : "Void Ghost"
 }

@@ -25,6 +25,10 @@ public class ModBlockEntities {
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Endcraft.MOD_ID, "mod_table_be"),
                     FabricBlockEntityTypeBuilder.create(ModTableBlockEntity::new,
                             ModBlocks.MOD_TABLE).build());
+    public static final BlockEntityType<EndPedastelBlockEntity> END_PEDASTEL_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Endcraft.MOD_ID, "end_pedastel_be"),
+                    FabricBlockEntityTypeBuilder.create(EndPedastelBlockEntity::new,
+                            ModBlocks.END_PEDASTEL).build());
 
     public static void registerBlockEntities() {
         Endcraft.LOGGER.info("Gegistering Block Entities for "+ Endcraft.MOD_ID);

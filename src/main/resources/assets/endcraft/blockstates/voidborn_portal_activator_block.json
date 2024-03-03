@@ -1,0 +1,30 @@
+{
+  "multipart": [
+    {
+      "when": {
+        "half": "1",
+        "on": "true"
+      },
+      "apply": {
+        "model": "endcraft:block/voidborn_portal_activator_upper_on"
+      }
+    },
+    {
+      "when": {
+        "half": "1",
+        "on": "false"
+      },
+      "apply": {
+        "model": "endcraft:block/voidborn_portal_activator_upper"
+      }
+    },
+    {
+      "when": {
+        "half": "0"
+      },
+      "apply": {
+        "model": "endcraft:block/voidborn_portal_activator_lower"
+      }
+    }
+  ]
+}
