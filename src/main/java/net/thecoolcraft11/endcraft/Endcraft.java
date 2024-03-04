@@ -58,6 +58,8 @@ public class Endcraft implements ModInitializer {
 
 		FabricDefaultAttributeRegistry.register(ModEntities.VOID_GHOST, VoidGhostEntity.createVoidGhostAttributes());
 
+
+
 		LOGGER.info("Initialize Endcraft!");
 	}
 }

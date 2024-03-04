@@ -1,5 +1,4 @@
-// 1.20.4	2024-03-03T16:24:09.2969442	endcraft - beyond the void/Model Definitions
-e7e99f92c96e8be83218be1ea0fdd48249de8c42 assets\endcraft\models\item\voidborn_portal_activator_block.json
+// 1.20.4	2024-03-04T21:04:45.9592945	endcraft - beyond the void/Model Definitions
 014018cc3955bec1b213cb2468d9786f0a098f99 assets\endcraft\models\item\void_fluid.json
 e6b1ba260a2dfc5168eee1bc5aef34b28045aba5 assets\endcraft\models\item\enderite_axe.json
 4e7a6cd5bed716fe814af52647976416969a9e81 assets\endcraft\models\item\ender_charger.json
@@ -30,11 +29,11 @@ f9b682a5691af07e2204e0d616e49ea9b2cfb9ed assets\endcraft\models\item\fake_block.
 43cb8320272c1611c340ed11613baf231ee82903 assets\endcraft\models\item\enderite_shovel.json
 3f2f69a0af6ada296413fc48466a7d59b1cf73d2 assets\endcraft\models\item\infected_stone.json
 76c5ab637f02d84ac2d23e98404ce80afc539709 assets\endcraft\models\item\ender_upgrade_fall_3.json
-adec5216934f31e685a31437791b895bd79c869c assets\endcraft\blockstates\voidborn_portal_activator_block.json
 b0326b88b9aef53e0eed235de397e7544c66777b assets\endcraft\models\item\enderite_hoe.json
 9debcb18041031d7f25f94272252080144617e8b assets\endcraft\models\item\ender_upgrade_durability_1.json
 d571e01bd207e7a757dab502804a7531d0933637 assets\endcraft\models\block\infected_dirt.json
 760e786fa1cc2902449b7df002b841a45d405f41 assets\endcraft\models\item\enderite_ore.json
+ff4a0a6fec73c288493d8c147c575e5db976c68e assets\endcraft\models\item\shadow_veil.json
 2eb41102ad18670619af4b8bb64fa09ef2328355 assets\endcraft\blockstates\enderite_ore.json
 aefeb34fda137c1c3893414a2b2beed84c7b405a assets\endcraft\models\item\enderite_core.json
 acaa40053daff8ba729ac66b0bbc9123c1bc5f8e assets\endcraft\models\item\enderite_scrap.json

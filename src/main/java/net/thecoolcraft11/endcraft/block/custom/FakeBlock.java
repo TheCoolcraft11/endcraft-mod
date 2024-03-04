@@ -20,15 +20,11 @@ public class FakeBlock extends Block {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        changeBlocksAroundPoint(world, pos, 3);
+        changeBlocksAroundPoint(world, pos, 6);
         return ActionResult.SUCCESS;
     }
 
-    @Override
-    public void neighborUpdate(BlockState state, World world, BlockPos pos, Block sourceBlock, BlockPos sourcePos, boolean notify) {
-        changeBlocksAroundPoint(world, pos, 1);
-        super.neighborUpdate(state, world, pos, sourceBlock, sourcePos, notify);
-    }
+
 
     private static void changeBlocksAroundPoint(World world, BlockPos centerPos, int radius) {
         int halfRadius = radius / 2;

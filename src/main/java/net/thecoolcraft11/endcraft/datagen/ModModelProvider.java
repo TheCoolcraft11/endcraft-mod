@@ -63,6 +63,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.ENDER_UPGRADE_FALL_3, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENDER_UPGRADE_FALL_4, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENDER_UPGRADE_FALL_5, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SHADOW_VEIL, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.VOID_GHOST_SPAWN_EGG, new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }

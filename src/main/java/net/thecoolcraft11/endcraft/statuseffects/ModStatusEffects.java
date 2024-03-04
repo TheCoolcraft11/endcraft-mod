@@ -18,6 +18,8 @@ public class ModStatusEffects {
             new FlyStatusEffect());
     public static final StatusEffect VOID = registerStatusEffect("void",
             new VoidStatusEffect());
+    public static final StatusEffect SHADOW_VEIL = registerStatusEffect("shadow_veil",
+            new ShadowStatusEffect());
 
     public static StatusEffect registerStatusEffect(String name, StatusEffect statusEffect) {
         return Registry.register(Registries.STATUS_EFFECT, new Identifier(Endcraft.MOD_ID, name), statusEffect);

@@ -5,11 +5,14 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.ShapeContext;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.client.particle.ParticleGroup;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.particle.ParticleType;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
@@ -77,6 +80,7 @@ public class VoidbornPortalActivatorBlock extends Block {
                                 if(hasItem(world, pos.add(2, -1, -5), ModItems.ENDERITE_INGOT, 0)) {
                                     if(hasItem(world, pos.add(-2, -1, -5), ModItems.ENDERITE_INGOT, 0)) {
                                         activatePortal(world, pos,-1, 2);
+                                        world.addParticle(ParticleTypes.EXPLOSION, pos.getX(), pos.getY(), pos.getZ(),0,0,0);
                                         world.setBlockState(pos, ModBlocks.VOIDBORN_PORTAL_ACTIVATOR_BLOCK.getDefaultState().with(HALF,1).with(ON, true));
                                         world.setBlockState(pos.down(1), ModBlocks.VOIDBORN_PORTAL_ACTIVATOR_BLOCK.getDefaultState().with(HALF,0).with(ON, true));
                                         player.addVelocity(0.5, 2, 0.5);
