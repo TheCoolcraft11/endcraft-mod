@@ -57,6 +57,7 @@ public class ModItems {
     public static final Item ENDER_UPGRADE_FALL_5 = registerItem("ender_upgrade_fall_5", new EnderUpgradeItem(new FabricItemSettings().maxCount(1), "fall", 5));
     public static final Item VOID_GHOST_SPAWN_EGG = registerItem("void_ghost_spawn_egg", new SpawnEggItem(ModEntities.VOID_GHOST, 0x000000, 0xFFFFFF, new FabricItemSettings()));
     public static final Item SHADOW_VEIL = registerItem("shadow_veil", new ShadowVeilItem(new FabricItemSettings().maxCount(1).maxDamage(64)));
+    public static final Item OCULUS_ORE = registerItem("oculus_ore", new OculusOreItem(new FabricItemSettings().maxCount(1).maxDamage(1)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Endcraft.MOD_ID, name), item);

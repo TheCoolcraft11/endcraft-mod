@@ -24,6 +24,8 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.GameMode;
 import net.thecoolcraft11.endcraft.util.Raycast;
 
+import java.util.Random;
+
 public class ShadowStatusEffect extends StatusEffect {
     public ShadowStatusEffect() {
         super(
@@ -50,12 +52,19 @@ public class ShadowStatusEffect extends StatusEffect {
                  ((PlayerEntity) entity).getAbilities().invulnerable = true;
                  StatusEffectInstance effect = new StatusEffectInstance(StatusEffects.BLINDNESS, 20, 0, false, false);
                  ((PlayerEntity)entity).addStatusEffect(effect);
+                 Random random = new Random();
+                 double random1 = random.nextDouble(2.0) - 1.0;
+                 double random2 = random.nextDouble(2.0) - 1.0;
+                 double random3 = random.nextDouble(2.0) - 1.0;
+                 ((PlayerEntity)entity).addVelocity(random1, random2, random3);
             }else {
                 ((PlayerEntity) entity).setInvisible(false);
-                ((PlayerEntity) entity).setInvulnerable(false);
-                ((PlayerEntity) entity).getAbilities().flying = false;
-                ((PlayerEntity) entity).getAbilities().allowFlying = false;
-                ((PlayerEntity) entity).getAbilities().invulnerable = false;
+                if(!((PlayerEntity) entity).isCreative()) {
+                    ((PlayerEntity) entity).setInvulnerable(false);
+                    ((PlayerEntity) entity).getAbilities().flying = false;
+                    ((PlayerEntity) entity).getAbilities().allowFlying = false;
+                    ((PlayerEntity) entity).getAbilities().invulnerable = false;
+                }
                 ((PlayerEntity) entity).removeStatusEffect(StatusEffects.BLINDNESS);
             }
         }

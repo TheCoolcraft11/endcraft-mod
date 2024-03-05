@@ -1,7 +1,7 @@
-// 1.20.4	2024-03-04T21:04:45.9582928	endcraft - beyond the void/Tags for minecraft:block
+// 1.20.4	2024-03-05T21:08:30.7645377	endcraft - beyond the void/Tags for minecraft:block
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\fabric\tags\blocks\needs_tool_level_5.json
-8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_stone_tool.json
 2853916f1c5d25bdc5b48c480689b0c1f7b9770b data\minecraft\tags\blocks\mineable\pickaxe.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_stone_tool.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_iron_tool.json
 2853916f1c5d25bdc5b48c480689b0c1f7b9770b data\fabric\tags\blocks\needs_tool_level_4.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_diamond_tool.json

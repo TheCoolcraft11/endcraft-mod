@@ -13,7 +13,6 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.ClickType;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
-import net.minecraft.world.GameMode;
 import net.minecraft.world.World;
 import net.thecoolcraft11.endcraft.statuseffects.ModStatusEffects;
 

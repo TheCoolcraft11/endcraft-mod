@@ -1,4 +1,4 @@
-// 1.20.4	2024-03-04T21:04:45.9592945	endcraft - beyond the void/Model Definitions
+// 1.20.4	2024-03-05T21:08:30.7655384	endcraft - beyond the void/Model Definitions
 014018cc3955bec1b213cb2468d9786f0a098f99 assets\endcraft\models\item\void_fluid.json
 e6b1ba260a2dfc5168eee1bc5aef34b28045aba5 assets\endcraft\models\item\enderite_axe.json
 4e7a6cd5bed716fe814af52647976416969a9e81 assets\endcraft\models\item\ender_charger.json
@@ -15,6 +15,7 @@ a57d956268778304644a19a8ee7583c91dd30361 assets\endcraft\models\item\enderite_sw
 a52e58dd02b419a45fc7f19612df7cfc59eaceab assets\endcraft\blockstates\mod_table.json
 3e3b75839fbfd547833cd1d68f044575ad115f50 assets\endcraft\models\item\essence_core.json
 36be2a6b5f8d1d7d844b64931ad52e9ca04fd175 assets\endcraft\blockstates\enderite_block.json
+0f44b707f21c596a22cce2a1a3466c5b2fc0bb89 assets\endcraft\models\item\oculus_ore.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\endcraft\models\item\void_ghost_spawn_egg.json
 c8e85b4733129f7eb60efe44be24e71745618365 assets\endcraft\blockstates\fake_block.json
 c935991443d5a213aed886252c37d22e3514cbd9 assets\endcraft\models\item\ender_upgrade_fall_5.json

@@ -17,6 +17,8 @@
   "item.endcraft.ender_staff": "Ender Staff",
   "item.endcraft.energy_cell": "Energy Cell",
   "item.endcraft.void_ghost_spawn_egg": "Void Ghost Spawn Egg",
+  "item.endcraft.shadow_veil": "Shadow Veil",
+  "item.endcraft.oculus_ore": "Oculus Ore",
 
   "upgrade.endcraft.none.0" : "None",
   "upgrade.endcraft.range.1" : "Range I",
@@ -80,6 +82,8 @@
   "endcraft.gui.mod_table" : "Mod Table",
 
   "effect.endcraft.fly": "Fly",
+  "effect.endcraft.void": "Curse of the Void",
+  "effect.endcraft.shadow_veil": "Shadow Veil",
 
   "entity.endcraft.void_ghost" : "Void Ghost"
 }

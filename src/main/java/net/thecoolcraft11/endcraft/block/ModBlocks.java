@@ -8,6 +8,7 @@ import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -34,7 +35,7 @@ public class ModBlocks {
     public static final Block FAKE_BLOCK2 = registerBlock("fake_block2",
             new FakeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(4f).noCollision()));
     public static final Block END_PEDASTEL = registerBlock("end_pedastel",
-            new EndPedastelBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(-1f).resistance(36000000f).nonOpaque())); //Schattenschleier, Oculus-Erz, Novaflame Spark, Nebulith Crystal, Chronikum, Phantasma Prism,Nebula Shard , Nullstone,
+            new EndPedastelBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(-1f).resistance(36000000f).nonOpaque())); //Oculus-Erz, Novaflame Spark, Nebulith Crystal, Chronikum, Phantasma Prism,Nebula Shard , Nullstone,
     public static final Block VOIDBORN_ABYSS_PORTAL = registerBlock("voidborn_abyss_portal",
             new VoidbornAbyssPortalBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL).strength(-1f).resistance(36000000f).nonOpaque().dropsNothing().pistonBehavior(PistonBehavior.BLOCK).noCollision()));
     public static final Block VOID_FLUID = registerBlock("void_fluid",
