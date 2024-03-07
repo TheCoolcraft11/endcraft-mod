@@ -4,26 +4,16 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
-import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
-import net.fabricmc.fabric.mixin.client.rendering.EntityRenderersMixin;
-import net.fabricmc.fabric.mixin.object.builder.client.EntityModelLayersMixin;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
-import net.minecraft.client.render.entity.model.EntityModelLayers;
-import net.minecraft.client.render.item.ItemRenderer;
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.util.InputUtil;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.screen.NamedScreenHandlerFactory;
-import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.thecoolcraft11.endcraft.block.ModBlocks;
-import net.thecoolcraft11.endcraft.block.entity.EndPedastelBlockEntity;
-import net.thecoolcraft11.endcraft.block.entity.EssenceAltarBlockEntity;
 import net.thecoolcraft11.endcraft.block.entity.ModBlockEntities;
 import net.thecoolcraft11.endcraft.block.renderer.EndPedastelBlockEntityRenderer;
 import net.thecoolcraft11.endcraft.block.renderer.EnderForgeConverterBlockEntityRenderer;
@@ -32,6 +22,7 @@ import net.thecoolcraft11.endcraft.entity.ModEntities;
 import net.thecoolcraft11.endcraft.entity.client.ModModelLayers;
 import net.thecoolcraft11.endcraft.entity.client.VoidGhostModel;
 import net.thecoolcraft11.endcraft.entity.client.VoidGhostRenderer;
+import net.thecoolcraft11.endcraft.item.custom.PhantasmaPrismItem;
 import net.thecoolcraft11.endcraft.screen.*;
 import org.lwjgl.glfw.GLFW;
 
@@ -50,6 +41,6 @@ public class EndcraftClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.VOID_GHOST, VoidGhostRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.VOIDGHOST, VoidGhostModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.OCULUS_PROJECTILE, FlyingItemEntityRenderer::new);
     }
-
 }

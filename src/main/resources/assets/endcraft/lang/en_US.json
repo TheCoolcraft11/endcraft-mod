@@ -19,6 +19,7 @@
   "item.endcraft.void_ghost_spawn_egg": "Void Ghost Spawn Egg",
   "item.endcraft.shadow_veil": "Shadow Veil",
   "item.endcraft.oculus_ore": "Oculus Ore",
+  "item.endcraft.phantasma_prism": "Phantasma Prism",
 
   "upgrade.endcraft.none.0" : "None",
   "upgrade.endcraft.range.1" : "Range I",
@@ -85,5 +86,11 @@
   "effect.endcraft.void": "Curse of the Void",
   "effect.endcraft.shadow_veil": "Shadow Veil",
 
-  "entity.endcraft.void_ghost" : "Void Ghost"
+  "entity.endcraft.void_ghost" : "Void Ghost",
+
+  "message.endcraft.phantasma_prism_to.many.blocks": "You don't have enough items in your inventory to fill this space",
+  "message.endcraft.phantasma_prism.radius": "Radius: ",
+  "message.endcraft.phantasma_prism_fill.limit": "Cannot fill more blocks than",
+  "message.endcraft.phantasma_prism_mode.1": "Mode: Cube(1)",
+  "message.endcraft.phantasma_prism_mode.2": "Mode: Sphere(2)"
 }
