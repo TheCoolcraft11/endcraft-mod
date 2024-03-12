@@ -20,7 +20,7 @@ public class FakeBlock extends Block {
 
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        changeBlocksAroundPoint(world, pos, 6);
+        changeBlocksAroundPoint(world, pos, 9);
         return ActionResult.SUCCESS;
     }
 
@@ -37,10 +37,10 @@ public class FakeBlock extends Block {
                     Block block = world.getBlockState(blockPos).getBlock();
 
                     if (block == ModBlocks.FAKE_BLOCK) {
-                        world.setBlockState(blockPos, ModBlocks.FAKE_BLOCK2.getDefaultState(), 1);
+                        world.setBlockState(blockPos, ModBlocks.FAKE_BLOCK2.getDefaultState());
                         }
                     if (block == ModBlocks.FAKE_BLOCK2) {
-                        world.setBlockState(blockPos, ModBlocks.FAKE_BLOCK.getDefaultState(), 1);
+                        world.setBlockState(blockPos, ModBlocks.FAKE_BLOCK.getDefaultState());
                     }
                 }
             }

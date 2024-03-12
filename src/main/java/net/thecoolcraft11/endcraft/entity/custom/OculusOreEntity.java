@@ -38,11 +38,15 @@ public class OculusOreEntity extends ThrownItemEntity {
                 EntityType<?> entity = EntityType.get(player.getMainHandStack().getOrCreateNbt().getString("entity")).orElse(null);
                 if(!(entity == null)) {
                     Entity entity1 = entity.create(this.getWorld());
-                    assert entity1 != null;
-                    entity1.updatePosition(this.getBlockPos().getX(), this.getBlockPos().getY()+ 1, this.getBlockPos().getZ());
-                    this.getWorld().spawnEntity(entity1);
-                    this.getStack().setDamage(this.getStack().getDamage() - 1);
-                    this.discard();
+
+                    if (entity1 != null) {
+                        entity1.updatePosition(this.getBlockPos().getX(), this.getBlockPos().getY()+ 1, this.getBlockPos().getZ());
+                        this.getWorld().spawnEntity(entity1);
+                        this.getStack().setDamage(this.getStack().getDamage() - 1);
+                        this.discard();
+                    }else {
+                        this.discard();
+                    }
                     if(player.getMainHandStack().getDamage() >= player.getMainHandStack().getMaxDamage()) {
                         player.getMainHandStack().decrement(1);
                     }

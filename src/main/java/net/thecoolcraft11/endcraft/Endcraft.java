@@ -20,6 +20,7 @@ import net.thecoolcraft11.endcraft.entity.ModEntities;
 import net.thecoolcraft11.endcraft.entity.custom.VoidGhostEntity;
 import net.thecoolcraft11.endcraft.item.ModItems;
 import net.thecoolcraft11.endcraft.item.ModItemGroups;
+import net.thecoolcraft11.endcraft.networking.ModMessages;
 import net.thecoolcraft11.endcraft.recipe.ModRecipes;
 import net.thecoolcraft11.endcraft.screen.ModScreenHandlers;
 import net.thecoolcraft11.endcraft.world.gen.ModWorldGeneration;
@@ -55,6 +56,7 @@ public class Endcraft implements ModInitializer {
 		ModRecipes.registerRecipes();
 		ModWorldGeneration.generateModWorldGen();
 		ModStatusEffects.registerStatusEffects();
+		ModMessages.registerC2SPackets();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.VOID_GHOST, VoidGhostEntity.createVoidGhostAttributes());
 

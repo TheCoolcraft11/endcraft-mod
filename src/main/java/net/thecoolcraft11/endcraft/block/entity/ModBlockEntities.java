@@ -7,6 +7,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.thecoolcraft11.endcraft.Endcraft;
 import net.thecoolcraft11.endcraft.block.ModBlocks;
+import net.thecoolcraft11.endcraft.block.custom.EnderStaffConfigurationBlock;
 
 public class ModBlockEntities {
     public static final BlockEntityType<EnderForgeConverterBlockEntity> ENDER_FORGE_CONVERTER_BLOCK_ENTITY =
@@ -28,6 +29,10 @@ public class ModBlockEntities {
     public static final BlockEntityType<EndPedastelBlockEntity> END_PEDASTEL_BLOCK_ENTITY =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Endcraft.MOD_ID, "end_pedastel_be"),
                     FabricBlockEntityTypeBuilder.create(EndPedastelBlockEntity::new,
+                            ModBlocks.END_PEDASTEL).build());
+    public static final BlockEntityType<EnderStaffConfigurationBlockEntity> ENDER_STAFF_CONFIGURATION_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Endcraft.MOD_ID, "ender_staff_configuration_be"),
+                    FabricBlockEntityTypeBuilder.create(EnderStaffConfigurationBlockEntity::new,
                             ModBlocks.END_PEDASTEL).build());
 
     public static void registerBlockEntities() {

@@ -146,18 +146,16 @@ public class ModTableBlockEntity extends BlockEntity implements ExtendedScreenHa
         if(this.getStack(OUTPUT_SLOT).getOrCreateNbt().getString("upgrade1").equals("none")) {
             this.getStack(OUTPUT_SLOT).getOrCreateNbt().putString("upgrade1", this.getStack(INPUT_SLOT3).getOrCreateNbt().getString("type"));
             this.getStack(OUTPUT_SLOT).getOrCreateNbt().putInt("upgrade1level", this.getStack(INPUT_SLOT3).getOrCreateNbt().getInt("level"));
-            this.removeStack(INPUT_SLOT1,5);
+            this.removeStack(INPUT_SLOT1, 5);
             this.removeStack(INPUT_SLOT3);
             this.getStack(INPUT_SLOT2).getOrCreateNbt().putInt("Energies", this.getStack(INPUT_SLOT2).getOrCreateNbt().getInt("Energies") - 100);
-        }
-        if(this.getStack(OUTPUT_SLOT).getOrCreateNbt().getString("upgrade2").equals("none")) {
+        }else if (this.getStack(OUTPUT_SLOT).getOrCreateNbt().getString("upgrade2").equals("none")) {
             this.getStack(OUTPUT_SLOT).getOrCreateNbt().putString("upgrade2", this.getStack(INPUT_SLOT3).getOrCreateNbt().getString("type"));
             this.getStack(OUTPUT_SLOT).getOrCreateNbt().putInt("upgrade2level", this.getStack(INPUT_SLOT3).getOrCreateNbt().getInt("level"));
             this.removeStack(INPUT_SLOT1,5);
             this.removeStack(INPUT_SLOT3);
             this.getStack(INPUT_SLOT2).getOrCreateNbt().putInt("Energies", this.getStack(INPUT_SLOT2).getOrCreateNbt().getInt("Energies") - 100);
-        }
-        if(this.getStack(OUTPUT_SLOT).getOrCreateNbt().getString("upgrade3").equals("none")) {
+        }else if(this.getStack(OUTPUT_SLOT).getOrCreateNbt().getString("upgrade3").equals("none")) {
             this.getStack(OUTPUT_SLOT).getOrCreateNbt().putString("upgrade3", this.getStack(INPUT_SLOT3).getOrCreateNbt().getString("type"));
             this.getStack(OUTPUT_SLOT).getOrCreateNbt().putInt("upgrade3level", this.getStack(INPUT_SLOT3).getOrCreateNbt().getInt("level"));
             this.removeStack(INPUT_SLOT1,5);

@@ -11,6 +11,7 @@ import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
+import net.minecraft.client.render.item.ItemRenderer;
 import net.minecraft.client.util.InputUtil;
 import net.minecraft.text.Text;
 import net.thecoolcraft11.endcraft.block.ModBlocks;
@@ -22,7 +23,11 @@ import net.thecoolcraft11.endcraft.entity.ModEntities;
 import net.thecoolcraft11.endcraft.entity.client.ModModelLayers;
 import net.thecoolcraft11.endcraft.entity.client.VoidGhostModel;
 import net.thecoolcraft11.endcraft.entity.client.VoidGhostRenderer;
+import net.thecoolcraft11.endcraft.event.KeyInputHandler;
 import net.thecoolcraft11.endcraft.item.custom.PhantasmaPrismItem;
+import net.thecoolcraft11.endcraft.mixin.ItemRendererAccessor;
+import net.thecoolcraft11.endcraft.mixin.ItemRendererMixin;
+import net.thecoolcraft11.endcraft.networking.ModMessages;
 import net.thecoolcraft11.endcraft.screen.*;
 import org.lwjgl.glfw.GLFW;
 
@@ -38,9 +43,12 @@ public class EndcraftClient implements ClientModInitializer {
         HandledScreens.register(ModScreenHandlers.ENDER_CHARGER_SCREEN_HANDLER, EnderChargerScreen::new);
         HandledScreens.register(ModScreenHandlers.MOD_TABLE_SCREEN_HANDLER, ModTableScreen::new);
         BlockEntityRendererFactories.register(ModBlockEntities.END_PEDASTEL_BLOCK_ENTITY, EndPedastelBlockEntityRenderer::new);
+        HandledScreens.register(ModScreenHandlers.ENDER_STAFF_CONFIGURATION_SCREEN_HANDLER, EnderStaffConfigurationScreen::new);
 
         EntityRendererRegistry.register(ModEntities.VOID_GHOST, VoidGhostRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.VOIDGHOST, VoidGhostModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.OCULUS_PROJECTILE, FlyingItemEntityRenderer::new);
+        KeyInputHandler.register();
+        ModMessages.registerS2CPackets();
     }
 }

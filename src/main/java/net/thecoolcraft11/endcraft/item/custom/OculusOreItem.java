@@ -53,6 +53,9 @@ public class OculusOreItem extends Item {
                 entity1.updatePosition(context.getBlockPos().getX(), context.getBlockPos().getY()+ 1, context.getBlockPos().getZ());
                 context.getWorld().spawnEntity(entity1);
                 context.getStack().setDamage(context.getStack().getDamage() + 1);
+                if(context.getStack().getDamage() >= context.getStack().getMaxDamage()) {
+                    context.getStack().decrement(1);
+                }
                 return ActionResult.SUCCESS;
             }
         }

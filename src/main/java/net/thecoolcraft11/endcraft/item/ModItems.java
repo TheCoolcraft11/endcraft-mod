@@ -59,6 +59,9 @@ public class ModItems {
     public static final Item SHADOW_VEIL = registerItem("shadow_veil", new ShadowVeilItem(new FabricItemSettings().maxCount(1).maxDamage(64)));
     public static final Item OCULUS_ORE = registerItem("oculus_ore", new OculusOreItem(new FabricItemSettings().maxCount(1).maxDamage(1)));
     public static final Item PHANTASMA_PRISM = registerItem("phantasma_prism", new PhantasmaPrismItem(new FabricItemSettings().maxCount(1)));
+    public static final Item ENCHANTED_SADDLE = registerItem("enchanted_saddle", new EnchantedSaddleItem(new FabricItemSettings().maxCount(1)));
+    public static final Item STAFF_OF_TELEPORTATION = registerItem("staff_of_teleportation", new StaffOfTeleportationItem(new FabricItemSettings().maxCount(1)));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Endcraft.MOD_ID, name), item);

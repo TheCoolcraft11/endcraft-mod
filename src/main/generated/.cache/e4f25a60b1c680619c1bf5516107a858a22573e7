@@ -1,4 +1,4 @@
-// 1.20.4	2024-03-05T21:08:30.7655384	endcraft - beyond the void/Model Definitions
+// 1.20.4	2024-03-08T20:51:11.2128724	endcraft - beyond the void/Model Definitions
 014018cc3955bec1b213cb2468d9786f0a098f99 assets\endcraft\models\item\void_fluid.json
 e6b1ba260a2dfc5168eee1bc5aef34b28045aba5 assets\endcraft\models\item\enderite_axe.json
 4e7a6cd5bed716fe814af52647976416969a9e81 assets\endcraft\models\item\ender_charger.json
@@ -35,6 +35,7 @@ b0326b88b9aef53e0eed235de397e7544c66777b assets\endcraft\models\item\enderite_ho
 d571e01bd207e7a757dab502804a7531d0933637 assets\endcraft\models\block\infected_dirt.json
 760e786fa1cc2902449b7df002b841a45d405f41 assets\endcraft\models\item\enderite_ore.json
 ff4a0a6fec73c288493d8c147c575e5db976c68e assets\endcraft\models\item\shadow_veil.json
+8cfb8f8d5a01f57d0967167baa79a4408a7ac9c3 assets\endcraft\models\item\phantasma_prism.json
 2eb41102ad18670619af4b8bb64fa09ef2328355 assets\endcraft\blockstates\enderite_ore.json
 aefeb34fda137c1c3893414a2b2beed84c7b405a assets\endcraft\models\item\enderite_core.json
 acaa40053daff8ba729ac66b0bbc9123c1bc5f8e assets\endcraft\models\item\enderite_scrap.json

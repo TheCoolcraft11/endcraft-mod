@@ -35,13 +35,13 @@ public class ModBlocks {
     public static final Block FAKE_BLOCK2 = registerBlock("fake_block2",
             new FakeBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(4f).noCollision()));
     public static final Block END_PEDASTEL = registerBlock("end_pedastel",
-            new EndPedastelBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(-1f).resistance(36000000f).nonOpaque())); //Novaflame Spark, Nebulith Crystal, Chronikum, Phantasma Prism, Nebula Shard , Nullstone,
+            new EndPedastelBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL))); //Novaflame Spark, Nebulith Crystal, Chronikum, Phantasma Prism, Nebula Shard , Nullstone,
     public static final Block VOIDBORN_ABYSS_PORTAL = registerBlock("voidborn_abyss_portal",
-            new VoidbornAbyssPortalBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL).strength(-1f).resistance(36000000f).nonOpaque().dropsNothing().pistonBehavior(PistonBehavior.BLOCK).noCollision()));
+            new VoidbornAbyssPortalBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL)));
     public static final Block VOID_FLUID = registerBlock("void_fluid",
-            new VoidBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(-1f).noCollision()));
+            new VoidBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL)));
     public static final Block VOID_LAYER = registerBlock("void_layer",
-            new VoidLayerBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(-1f).noCollision()));
+            new VoidLayerBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL)));
     public static final Block INFECTED_DIRT = registerBlock("infected_dirt",
             new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(100f)));
     public static final Block INFECTED_GRASS = registerBlock("infected_grass",
@@ -50,6 +50,8 @@ public class ModBlocks {
             new Block(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(500f)));
     public static final Block VOIDBORN_PORTAL_ACTIVATOR_BLOCK = registerBlock("voidborn_portal_activator_block",
             new VoidbornPortalActivatorBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL).collidable(true)));
+    public static final Block ENDER_STAFF_CONFIGURATION_BLOCK = registerBlock("ender_staff_configuration",
+            new EnderStaffConfigurationBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(4f).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {

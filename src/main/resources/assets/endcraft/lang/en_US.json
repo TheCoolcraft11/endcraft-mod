@@ -20,6 +20,8 @@
   "item.endcraft.shadow_veil": "Shadow Veil",
   "item.endcraft.oculus_ore": "Oculus Ore",
   "item.endcraft.phantasma_prism": "Phantasma Prism",
+  "item.endcraft.energy": "Phantasma Prism",
+  "item.endcraft.enchanted_saddle": "Enchanted Saddle",
 
   "upgrade.endcraft.none.0" : "None",
   "upgrade.endcraft.range.1" : "Range I",
@@ -92,5 +94,13 @@
   "message.endcraft.phantasma_prism.radius": "Radius: ",
   "message.endcraft.phantasma_prism_fill.limit": "Cannot fill more blocks than",
   "message.endcraft.phantasma_prism_mode.1": "Mode: Cube(1)",
-  "message.endcraft.phantasma_prism_mode.2": "Mode: Sphere(2)"
+  "message.endcraft.phantasma_prism_mode.2": "Mode: Sphere(2)",
+  "message.endcraft.phantasma_prism_mode.3": "Mode: Remove Cube(3)",
+  "message.endcraft.phantasma_prism_mode.4": "Mode: Remove Sphere(4)",
+  "message.endcraft.phantasma_prism_mode.5": "Mode: Hollow Cube(5)",
+  "message.endcraft.phantasma_prism_mode_item.1": "Cube(1)",
+  "message.endcraft.phantasma_prism_mode_item.2": "Sphere(2)",
+  "message.endcraft.phantasma_prism_mode_item.3": "Remove Cube(3)",
+  "message.endcraft.phantasma_prism_mode_item.4": "Remove Sphere(4)",
+  "message.endcraft.phantasma_prism_mode_item.5": "Hollow Cube(5)"
 }
