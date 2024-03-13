@@ -52,6 +52,8 @@ public class ModBlocks {
             new VoidbornPortalActivatorBlock(FabricBlockSettings.copyOf(Blocks.END_PORTAL).collidable(true)));
     public static final Block ENDER_STAFF_CONFIGURATION_BLOCK = registerBlock("ender_staff_configuration",
             new EnderStaffConfigurationBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(4f).nonOpaque()));
+    public static final Block ENDER_CHEST = registerBlock("enderite_chest",
+            new EnderChestBlock(FabricBlockSettings.copyOf(Blocks.OBSIDIAN).strength(4f).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {

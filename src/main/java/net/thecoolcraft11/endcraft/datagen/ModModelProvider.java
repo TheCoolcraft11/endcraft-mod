@@ -32,6 +32,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INFECTED_DIRT);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.INFECTED_STONE);
         blockStateModelGenerator.registerSimpleState(ModBlocks.INFECTED_GRASS);
+        blockStateModelGenerator.registerSimpleState(ModBlocks.ENDER_CHEST);
 
 
 
@@ -67,6 +68,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.OCULUS_ORE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PHANTASMA_PRISM, Models.GENERATED);
         itemModelGenerator.register(ModItems.ENCHANTED_SADDLE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STAFF_OF_TELEPORTATION, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ENDERITE_CHEST_KEY, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.VOID_GHOST_SPAWN_EGG, new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }

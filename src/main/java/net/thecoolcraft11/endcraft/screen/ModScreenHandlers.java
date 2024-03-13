@@ -23,6 +23,9 @@ public class ModScreenHandlers {
     public static final ScreenHandlerType<EnderStaffConfigurationScreenHandler> ENDER_STAFF_CONFIGURATION_SCREEN_HANDLER
             = Registry.register(Registries.SCREEN_HANDLER, new Identifier(Endcraft.MOD_ID, "ender_staff_configuration"),
             new ExtendedScreenHandlerType<>((EnderStaffConfigurationScreenHandler::new)));
+    public static final ScreenHandlerType<EnderChestScreenHandler> ENDER_CHEST_SCREEN_HANDLER
+            = Registry.register(Registries.SCREEN_HANDLER, new Identifier(Endcraft.MOD_ID, "ender_chest"),
+            new ExtendedScreenHandlerType<>((EnderChestScreenHandler::new)));
 
     public static void registerScreenHandlers() {
         Endcraft.LOGGER.info("Registering ScreenHandlers for " + Endcraft.MOD_ID);

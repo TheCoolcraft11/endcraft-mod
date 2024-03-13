@@ -7,6 +7,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.thecoolcraft11.endcraft.Endcraft;
 import net.thecoolcraft11.endcraft.block.ModBlocks;
+import net.thecoolcraft11.endcraft.block.custom.EnderChestBlock;
 import net.thecoolcraft11.endcraft.block.custom.EnderStaffConfigurationBlock;
 
 public class ModBlockEntities {
@@ -33,7 +34,11 @@ public class ModBlockEntities {
     public static final BlockEntityType<EnderStaffConfigurationBlockEntity> ENDER_STAFF_CONFIGURATION_BLOCK_ENTITY =
             Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Endcraft.MOD_ID, "ender_staff_configuration_be"),
                     FabricBlockEntityTypeBuilder.create(EnderStaffConfigurationBlockEntity::new,
-                            ModBlocks.END_PEDASTEL).build());
+                            ModBlocks.ENDER_STAFF_CONFIGURATION_BLOCK).build());
+    public static final BlockEntityType<EnderChestBlockEntity> ENDER_CHEST_BLOCK_ENTITY =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(Endcraft.MOD_ID, "ender_chest_be"),
+                    FabricBlockEntityTypeBuilder.create(EnderChestBlockEntity::new,
+                            ModBlocks.ENDER_CHEST).build());
 
     public static void registerBlockEntities() {
         Endcraft.LOGGER.info("Gegistering Block Entities for "+ Endcraft.MOD_ID);

@@ -1,4 +1,4 @@
-// 1.20.4	2024-03-08T20:51:11.2128724	endcraft - beyond the void/Model Definitions
+// 1.20.4	2024-03-13T20:14:39.4841522	endcraft - beyond the void/Model Definitions
 014018cc3955bec1b213cb2468d9786f0a098f99 assets\endcraft\models\item\void_fluid.json
 e6b1ba260a2dfc5168eee1bc5aef34b28045aba5 assets\endcraft\models\item\enderite_axe.json
 4e7a6cd5bed716fe814af52647976416969a9e81 assets\endcraft\models\item\ender_charger.json
@@ -21,11 +21,13 @@ c8e85b4733129f7eb60efe44be24e71745618365 assets\endcraft\blockstates\fake_block.
 c935991443d5a213aed886252c37d22e3514cbd9 assets\endcraft\models\item\ender_upgrade_fall_5.json
 2941739febbfd1e264cf0eb2304cd3cc9b4d9785 assets\endcraft\models\item\essence_altar.json
 4945841844c4a224433e3e6717de94abac0c5a88 assets\endcraft\models\item\ender_upgrade_fall_2.json
+93c21b6f40397c47df2377d2d47994a77e522f4e assets\endcraft\models\item\enchanted_saddle.json
 f24bb7bc15d5087e3ef668f5aa481ed6dae64b6a assets\endcraft\models\item\enderite_block.json
 021e2a6d1f121df9b52caa7c644ee6cf4bd65d0d assets\endcraft\models\block\enderite_block.json
 0922a7be7fd6f80e9d2ba9b7bf02b9c3ee9752ff assets\endcraft\blockstates\ender_forge_converter.json
-3d2b4aa6160031817fc075b1e172b9d4c2dc2f63 assets\endcraft\blockstates\ender_charger.json
+8117fe257b1bbd32f84fda96539851852444b738 assets\endcraft\models\item\staff_of_teleportation.json
 f9b682a5691af07e2204e0d616e49ea9b2cfb9ed assets\endcraft\models\item\fake_block.json
+3d2b4aa6160031817fc075b1e172b9d4c2dc2f63 assets\endcraft\blockstates\ender_charger.json
 1b39eab388f629d110389d74ba540d4d4b4178df assets\endcraft\models\block\void_fluid.json
 43cb8320272c1611c340ed11613baf231ee82903 assets\endcraft\models\item\enderite_shovel.json
 3f2f69a0af6ada296413fc48466a7d59b1cf73d2 assets\endcraft\models\item\infected_stone.json
@@ -36,6 +38,7 @@ d571e01bd207e7a757dab502804a7531d0933637 assets\endcraft\models\block\infected_d
 760e786fa1cc2902449b7df002b841a45d405f41 assets\endcraft\models\item\enderite_ore.json
 ff4a0a6fec73c288493d8c147c575e5db976c68e assets\endcraft\models\item\shadow_veil.json
 8cfb8f8d5a01f57d0967167baa79a4408a7ac9c3 assets\endcraft\models\item\phantasma_prism.json
+1d62a436606c08f8d7666d31a439deac469aea75 assets\endcraft\blockstates\enderite_chest.json
 2eb41102ad18670619af4b8bb64fa09ef2328355 assets\endcraft\blockstates\enderite_ore.json
 aefeb34fda137c1c3893414a2b2beed84c7b405a assets\endcraft\models\item\enderite_core.json
 acaa40053daff8ba729ac66b0bbc9123c1bc5f8e assets\endcraft\models\item\enderite_scrap.json
@@ -45,16 +48,18 @@ acaa40053daff8ba729ac66b0bbc9123c1bc5f8e assets\endcraft\models\item\enderite_sc
 d685662fb91ab9587d8d544ea44fce466ac7cd7a assets\endcraft\models\item\ender_upgrade_durability_2.json
 cab4d9d77f1ab249d11910ca90496c5612b4e7b8 assets\endcraft\models\item\ender_forge_converter.json
 e3c13b6ed14832431e322929b3897ff80f77380d assets\endcraft\blockstates\infected_dirt.json
-d034e36016146dae69f8f106a8ad27253e8ae70e assets\endcraft\blockstates\void_fluid.json
 5a9355dbf0ea4532fda7ac9e86145645f0494d74 assets\endcraft\models\block\infected_stone.json
+d034e36016146dae69f8f106a8ad27253e8ae70e assets\endcraft\blockstates\void_fluid.json
 c50352333e918c9c39a895c28233ecde9304464d assets\endcraft\blockstates\infected_stone.json
 56e447121944a0ef226295dc25ab16771b5d0d8d assets\endcraft\models\item\enderite_pickaxe.json
 bd4565a118ed663bb711b850a87a5e2aaabbefaa assets\endcraft\models\item\ender_upgrade_fall_1.json
 b2d6cb0fe3f350506adc37e679424146365f98d8 assets\endcraft\models\item\ender_upgrade_fall_4.json
 5b048484bdbfa96ae873ef360947118331f17d07 assets\endcraft\models\item\infected_grass.json
 926ae36fa0f1832196007270203b3199edc59bc3 assets\endcraft\models\item\ender_upgrade_range_3.json
+f6a0aa1e65808080d925b4e7d53b76d6b63cc2e0 assets\endcraft\models\item\enderite_chest_key.json
 d290756ed868a58e9e3c3f038a295ce7ee1758f1 assets\endcraft\blockstates\fake_block2.json
 db59bac6150e563e78c9ca59738c8dd8c75cee5a assets\endcraft\models\block\fake_block2.json
+14837b49fdf546aabf90082cc8eb62a6103d4353 assets\endcraft\models\item\enderite_chest.json
 adb5ce3ccf09b09993aa2ce9fdd5ed73e4c43abb assets\endcraft\models\item\ender_upgrade_durability_4.json
 ef6464bd3a4aa47e94c48bf93abfb08654d4d541 assets\endcraft\models\block\fake_block.json
 ab6dbdf34c99181c8fe8f6514982b295402363ff assets\endcraft\models\item\enderite_ingot.json

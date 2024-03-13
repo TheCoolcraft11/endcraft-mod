@@ -61,6 +61,7 @@ public class ModItems {
     public static final Item PHANTASMA_PRISM = registerItem("phantasma_prism", new PhantasmaPrismItem(new FabricItemSettings().maxCount(1)));
     public static final Item ENCHANTED_SADDLE = registerItem("enchanted_saddle", new EnchantedSaddleItem(new FabricItemSettings().maxCount(1)));
     public static final Item STAFF_OF_TELEPORTATION = registerItem("staff_of_teleportation", new StaffOfTeleportationItem(new FabricItemSettings().maxCount(1)));
+    public static final Item ENDERITE_CHEST_KEY  = registerItem("enderite_chest_key", new EnderiteChestKeyItem(new FabricItemSettings().maxCount(1)));
 
 
     private static Item registerItem(String name, Item item) {

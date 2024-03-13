@@ -44,6 +44,7 @@ public class EndcraftClient implements ClientModInitializer {
         HandledScreens.register(ModScreenHandlers.MOD_TABLE_SCREEN_HANDLER, ModTableScreen::new);
         BlockEntityRendererFactories.register(ModBlockEntities.END_PEDASTEL_BLOCK_ENTITY, EndPedastelBlockEntityRenderer::new);
         HandledScreens.register(ModScreenHandlers.ENDER_STAFF_CONFIGURATION_SCREEN_HANDLER, EnderStaffConfigurationScreen::new);
+        HandledScreens.register(ModScreenHandlers.ENDER_CHEST_SCREEN_HANDLER, EnderChestScreen::new);
 
         EntityRendererRegistry.register(ModEntities.VOID_GHOST, VoidGhostRenderer::new);
         EntityModelLayerRegistry.registerModelLayer(ModModelLayers.VOIDGHOST, VoidGhostModel::getTexturedModelData);
