@@ -22,6 +22,7 @@
   "item.endcraft.phantasma_prism": "Phantasma Prism",
   "item.endcraft.energy": "Phantasma Prism",
   "item.endcraft.enchanted_saddle": "Enchanted Saddle",
+  "item.endcraft.enderite_chest_key": "Enderite Chest Key",
 
   "upgrade.endcraft.none.0" : "None",
   "upgrade.endcraft.range.1" : "Range I",
@@ -73,6 +74,7 @@
   "block.endcraft.void_layer" : "Void Layer",
   "block.endcraft.end_pedastel" : "End Pedastel",
   "block.endcraft.voidborn_abyss_portal" : "Voidborn Abyss Portal",
+  "block.endcraft.enderite_chest" : "Enderite Chest",
 
 
   "death.attack.essence.removed_area" : "%1$s was in a colibating area",
@@ -102,5 +104,8 @@
   "message.endcraft.phantasma_prism_mode_item.2": "Sphere(2)",
   "message.endcraft.phantasma_prism_mode_item.3": "Remove Cube(3)",
   "message.endcraft.phantasma_prism_mode_item.4": "Remove Sphere(4)",
-  "message.endcraft.phantasma_prism_mode_item.5": "Hollow Cube(5)"
+  "message.endcraft.phantasma_prism_mode_item.5": "Hollow Cube(5)",
+  "message.endcraft.enderite_chest.pwd_not_match": "Password does not match!",
+  "message.endcraft.enderite_chest.no_access": "You don't have access to that block!",
+  "message.endcraft.enderite_chest.already_aligned": "This key is already aligned to a Enderite Chest!"
 }

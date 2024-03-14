@@ -3,11 +3,15 @@ package net.thecoolcraft11.endcraft.block.custom;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
@@ -19,6 +23,9 @@ import net.thecoolcraft11.endcraft.Endcraft;
 import net.thecoolcraft11.endcraft.block.entity.EnderChestBlockEntity;
 import net.thecoolcraft11.endcraft.item.ModItems;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.UUID;
+
 
 public class EnderChestBlock extends BlockWithEntity implements BlockEntityProvider {
     private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 15, 16);
@@ -67,21 +74,48 @@ public class EnderChestBlock extends BlockWithEntity implements BlockEntityProvi
         if (!world.isClient) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof EnderChestBlockEntity) {
-                Endcraft.LOGGER.info("1");
                 EnderChestBlockEntity customBlockEntity = (EnderChestBlockEntity) blockEntity;
-                Endcraft.LOGGER.info("B = " + customBlockEntity.getPlayer());
-                Endcraft.LOGGER.info("P = " + player.getUuid());
-            if(customBlockEntity.getPlayer().equals(player.getUuid())) {
+            if(customBlockEntity.getPlacer().equals(player.getUuid())) {
             if (player.getMainHandStack().getItem() != ModItems.ENDERITE_CHEST_KEY && !player.getMainHandStack().getOrCreateNbt().getBoolean("aligned")) {
-                Endcraft.LOGGER.info("3");
                 NamedScreenHandlerFactory screenHandlerFactory = ((EnderChestBlockEntity) world.getBlockEntity(pos));
 
                 if (screenHandlerFactory != null) {
-                    Endcraft.LOGGER.info("4");
                     player.openHandledScreen(screenHandlerFactory);
                         }
-                    }
+                    }else {
+                if (!player.getMainHandStack().getOrCreateNbt().getBoolean("aligned")) {
+                    player.getMainHandStack().getOrCreateNbt().putInt("y1", pos.getY());
+                    player.getMainHandStack().getOrCreateNbt().putInt("x1", pos.getX());
+                        player.getMainHandStack().getOrCreateNbt().putInt("z1", pos.getZ());
+                       player.getMainHandStack().getOrCreateNbt().putUuid("pwd",customBlockEntity.getPwd());
+                        player.getMainHandStack().getOrCreateNbt().putBoolean("aligned", true);
+
+                    }else {
+                    player.sendMessage(Text.translatable("message.endcraft.enderite_chest.already_aligned").formatted(Formatting.DARK_RED), true);
                 }
+                 }
+                }else {
+                player.sendMessage(Text.translatable("message.endcraft.enderite_chest.no_access").formatted(Formatting.DARK_RED), true);
+            }
+            if (player.getMainHandStack().getItem() == ModItems.ENDERITE_INGOT) {
+                customBlockEntity.addGuest(player.getUuid());
+                player.sendMessage(Text.of((customBlockEntity.getGuests())));
+            }else {
+                if(player.getMainHandStack().getItem() == ModItems.ENDERITE_CORE) {
+                    customBlockEntity.removeGuest(player.getUuid());
+                }
+            }
+                        if (customBlockEntity.getGuests().equals(player.getUuid())) {
+                            NamedScreenHandlerFactory screenHandlerFactory = ((EnderChestBlockEntity) world.getBlockEntity(pos));
+
+                            if (screenHandlerFactory != null) {
+                                player.openHandledScreen(screenHandlerFactory);
+                        }
+                    }else {
+                            if (!customBlockEntity.getPlacer().equals( player.getUuid())) {
+                                player.sendMessage(Text.translatable("message.endcraft.enderite_chest.no_access").formatted(Formatting.DARK_RED), true);
+                            }
+                        }
             }
         }
         return ActionResult.SUCCESS;
@@ -94,6 +128,8 @@ public class EnderChestBlock extends BlockWithEntity implements BlockEntityProvi
             if (blockEntity instanceof EnderChestBlockEntity) {
                 EnderChestBlockEntity customBlockEntity = (EnderChestBlockEntity) blockEntity;
                 customBlockEntity.setPlacer(placer.getUuid());
+                customBlockEntity.setPwd(UUID.randomUUID());
+
             }
         }
         super.onPlaced(world, pos, state, placer, itemStack);

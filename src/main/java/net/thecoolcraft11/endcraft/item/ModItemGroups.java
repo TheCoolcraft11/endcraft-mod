@@ -61,6 +61,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.VOID_FLUID);
                         entries.add(ModBlocks.VOID_LAYER);
                         entries.add(ModItems.VOID_GHOST_SPAWN_EGG);
+                        entries.add(ModItems.OCULUS_ORE);
+                        entries.add(ModItems.ENCHANTED_SADDLE);
+                        entries.add(ModItems.SHADOW_VEIL);
+                        entries.add(ModItems.STAFF_OF_TELEPORTATION);
+                        entries.add(ModBlocks.ENDER_CHEST);
+                        entries.add(ModItems.ENDERITE_CHEST_KEY);
                     }).build());
     public static void registerItemGroups() {
         Endcraft.LOGGER.info("Registring Item Groups for " + Endcraft.MOD_ID);

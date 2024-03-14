@@ -6,7 +6,6 @@ import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
@@ -19,12 +18,11 @@ import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
-import net.thecoolcraft11.endcraft.Endcraft;
-import net.thecoolcraft11.endcraft.item.ModItems;
 import net.thecoolcraft11.endcraft.screen.EnderChestScreenHandler;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 public class EnderChestBlockEntity extends BlockEntity implements ExtendedScreenHandlerFactory, ImplementedInventory {
@@ -36,7 +34,11 @@ public class EnderChestBlockEntity extends BlockEntity implements ExtendedScreen
 
 
     protected final PropertyDelegate propertyDelegate;
-    private int pwd = 0;
+    private UUID pwd = null;
+    private List<UUID> guests = new ArrayList<>();
+    private UUID guest_1 = null;
+    private UUID guest_2 = null;
+    private UUID guest_3 = null;
 
     public EnderChestBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntities.ENDER_CHEST_BLOCK_ENTITY, pos, state);
@@ -44,7 +46,6 @@ public class EnderChestBlockEntity extends BlockEntity implements ExtendedScreen
             @Override
             public int get(int index) {
                 return switch (index) {
-                    case 0 -> EnderChestBlockEntity.this.pwd;
                     default -> 0;
                 };
             }
@@ -52,7 +53,6 @@ public class EnderChestBlockEntity extends BlockEntity implements ExtendedScreen
             @Override
             public void set(int index, int value) {
                 switch (index) {
-                    case 0 -> EnderChestBlockEntity.this.pwd = value;
                 }
             }
 
@@ -72,7 +72,28 @@ public class EnderChestBlockEntity extends BlockEntity implements ExtendedScreen
         this.player = placer;
         markDirty();
     }
-    public UUID getPlayer() {
+    public void setPwd(UUID pwd) {
+        this.pwd = pwd;
+        markDirty();
+    }
+    public void addGuest(UUID guest) {
+        //this.guests.add(guest);
+        this.guest_1 = guest_1;
+        markDirty();
+    }
+    public void removeGuest(UUID guest) {
+//        this.guests.remove(guest);
+        this.guest_1 = null;
+        markDirty();
+    }
+    public UUID getGuests() {
+        //return this.guests;
+        return this.guest_1;
+    }
+    public UUID getPwd() {
+        return this.pwd;
+    }
+    public UUID getPlacer() {
         return  this.player;
     }
 
@@ -95,16 +116,26 @@ public class EnderChestBlockEntity extends BlockEntity implements ExtendedScreen
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, inventory);
-        nbt.putInt("pwd", pwd);
+        nbt.putUuid("pwd", pwd);
         nbt.putUuid("placer", player);
+        if (guest_1 != null) {
+            nbt.putUuid("guest_1", guest_1);
+        }
+        //nbt.putUuid("guest_2", guest_2);
+            //nbt.putUuid("guest_3", guest_3);
     }
 
     @Override
     public void readNbt(NbtCompound nbt) {
         super.readNbt(nbt);
         Inventories.readNbt(nbt, inventory);
-        pwd = nbt.getInt("pwd");
-         player = nbt.getUuid("placer");
+        pwd = nbt.getUuid("pwd");
+        player = nbt.getUuid("placer");
+        if (nbt.getUuid("guest_1") != null) {
+            guest_1 = nbt.getUuid("guest_1");
+        }
+        //guest_2 = nbt.getUuid("guest_2");
+        //guest_3 = nbt.getUuid("guest_3");
     }
 
     @Nullable
